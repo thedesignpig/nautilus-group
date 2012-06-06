@@ -8,7 +8,7 @@
 grpName=`gdialog --title "Group Items" --inputbox "Group Name" 200 450 2>&1` || exit
 
 
-# Check if the folder exists
+#Check if the folder exists
 for files in `ls -1`
 	do
 		if [ $grpName = $files ]
