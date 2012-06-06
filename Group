@@ -5,7 +5,15 @@
 
 
 #get Group Name
-grpName=`gdialog --title "Group Items" --inputbox "Group Name" 200 450 2>&1` || exit
+
+#For zenity is supposed to be in your system
+grpName=`zenity --entry --title="Groupt Items" --text="Group Name" --entry-text="" 2>&1` || exit
+
+#Uncomment the following line if you don't have zendity but have gdialog in your system installed in your system and comment the above line
+#grpName=`gdialog --title "Group Items" --inputbox "Group Name" 200 450 2>&1` || exit
+
+
+
 
 
 #Check if the folder exists
