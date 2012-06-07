@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#Script to Group items into Folder
+#By : Shaswot Singh Adhikari
+
+
+#get Group Name
+grpName=`gdialog --title "Group Items" --inputbox "Group Name" 200 450 2>&1` || exit
+
+
+#Check if the folder exists
+for files in `ls -1`
+	do
+		if [ $grpName = $files ]
+		then
+			grpName="$grpName(1)"
+		fi		
+	done		
+
+#Create Folder
+mkdir $grpName
+
+#Loop between the Selected Files
+for F in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS; do
+#move selected File to the group Created
+	mv `echo $F` `echo "./"$grpName`
+done
