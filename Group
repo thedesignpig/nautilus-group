@@ -8,7 +8,7 @@
 #get Group Name
 
 #For zenity is supposed to be in your system
-grpName=`zenity --entry --title="Groupt Items" --text="Group Name" --entry-text="" 2>&1` || exit
+grpName=`zenity --entry --title="Group Items" --text="Group Name" --entry-text="" 2>&1` || exit
 
 #Uncomment the following line if you don't have zendity but have gdialog in your system installed in your system and comment the above line
 #grpName=`gdialog --title "Group Items" --inputbox "Group Name" 200 450 2>&1` || exit
